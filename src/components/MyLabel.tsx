@@ -21,12 +21,19 @@ export interface MyLabelProps {
    * Custom Color
    */
   colorCustom?: string;
+  /**
+   * Custom Color
+   */
+  test?: string;
 }
 
-export const MyLabel = ( {label = 'No Label ', size = 'normal', allCaps = false, color = 'primary', colorCustom = 'black'}: MyLabelProps ) => {
+export const MyLabel = ( {label = 'No Label ', size = 'normal', allCaps = false, color = 'primary', colorCustom = 'black', test = 'todo bien'}: MyLabelProps ) => {
   return (
-    <span className={`label ${size} text-${color}`} style={{color: colorCustom}}>
-        { allCaps ?  label.toUpperCase() : label}
-    </span>
+    <div>
+      <span className={`label ${size} text-${color}`} style={{color: colorCustom}}>
+          { allCaps ?  label.toUpperCase() : label}
+      </span>
+      <small>{test}</small>
+    </div>
   )
 }
