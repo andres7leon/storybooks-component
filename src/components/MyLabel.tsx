@@ -37,3 +37,6 @@ export const MyLabel = ( {label = 'No Label ', size = 'normal', allCaps = false,
     </div>
   )
 }
+
+
+export default MyLabel;
